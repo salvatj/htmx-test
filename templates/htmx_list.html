@@ -1,0 +1,7 @@
+<ul>
+[[for sh in persons:]]
+    <li><a hx-get="[[=URL('htmx_form/%s' % sh.id)]]" hx-target="#htmx-form-demo">
+    [[=sh.id]] &nbsp; - &nbsp; [[=sh.name]]
+    </a></li>
+[[pass]]
+</ul>

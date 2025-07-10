@@ -1,0 +1,13 @@
+[[extend 'layout.html']]
+[[=timestamp]]
+
+<h5>simple form demo</h5> 
+[[=form]]
+
+<h5>rows</h5>
+<a href="../simple_form" role="button">create</a>
+<ul>
+  [[for row in rows:]]
+  <li>[[=row.id]]: [[=row.name]] ([[=row.job]]) <a href="../simple_form/[[=row.id]]">edit</a></li>
+  [[pass]]
+</ul>
