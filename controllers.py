@@ -75,10 +75,3 @@ def htmx_grid():
     }
     grid.process()
     return dict(grid=grid)
-
-#------------------------------------------
-
-@action("htmx_demo")
-@action.uses("htmx_demo.html")
-def htmx_demo():
-    return dict(timestamp=datetime.datetime.now())
