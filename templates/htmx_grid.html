@@ -1,1 +1,14 @@
+<script>
+    var el = document.querySelector("a[href*='static/uploads']");
+    el.setAttribute("hx-boost","false");
+</script>
+
 [[=grid.render()]]
+
+[[if grid.mode in ['edit']: ]]
+<script>
+    var editform = document.querySelector("form");
+    editform.setAttribute("hx-encoding","multipart/form-data");
+    editform.setAttribute("hx-push-url", "true");
+</script>
+[[pass]]
