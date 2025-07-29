@@ -45,6 +45,7 @@ def htmx_form(record_id=None):
     attrs = {
         "_hx-post": URL("htmx_form/%s" % record_id),
         "_hx-target": "#htmx-form-demo",
+        "_hx-encoding": "multipart/form-data",
     }
     form = Form(db.person, record=db.person(record_id), **attrs)
     if form.accepted:
